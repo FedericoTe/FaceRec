@@ -1,0 +1,21 @@
+#################################
+#
+#  FICHERO CREADO PARA INDICAR QUÉ ARCHIVOS Y DIRECTORIOS NO QUEREMOS CONSIDERAR EN GITHUB
+#
+#  Leído en: https://git-scm.com/book/es/v1/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio
+#
+#################################
+
+
+
+# ignore el fichero .Rhistory
+
+.Rhistory
+
+# ignore el fichero .RData
+
+.RData
+
+# ignore all files in the DATA/ directory
+
+DATA/

@@ -19,3 +19,10 @@
 # ignore all files in the DATA/ directory
 
 DATA/
+
+# ignore los ficheros del proyecto
+
+.Rproj.user/
+
+FaceRec.Rproj
+

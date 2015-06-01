@@ -109,11 +109,11 @@ saveRDS(Todas_Imagenes,file= "DATA/Imagenes.saved")
 
 # Para ver las imagenes una a una elegimos el numero de imagen 
 
-NumeroImagen <- 3
+NumeroImagen <- 80
 
 # la vemos  en blanco y negro
 
-image(1:96,1:96,Las_Imagenes[[NumeroImagen]],col=gray((0:255)/255))
+image(1:96,1:96,Todas_Imagenes[[NumeroImagen]],col=gray((0:255)/255))
 
 # Podemos ahora marcar los puntos de esta imagen con un bucle for:
 #

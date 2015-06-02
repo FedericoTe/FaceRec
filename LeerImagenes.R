@@ -109,7 +109,7 @@ saveRDS(Todas_Imagenes,file= "DATA/Imagenes.saved")
 
 # Para ver las imagenes una a una elegimos el numero de imagen 
 
-NumeroImagen <- 80
+NumeroImagen <- 1906
 
 # la vemos  en blanco y negro
 
@@ -126,5 +126,11 @@ image(1:96,1:96,Todas_Imagenes[[NumeroImagen]],col=gray((0:255)/255))
 indice <- seq(from = 1, to = (ncol(Train)-2) ,by =2)
 lapply(indice, function(x,y) points(96-y[NumeroImagen,x],96-y[NumeroImagen,x+1], col = "blue", pch = 19), y=Train )
 
+
+# Para ver la variabilidad del centro del ojo izquierdo podemos hacer:
+# Primero ver qué columnas tienen esas coordenadas con: colnames(True)
+# Ahora aplicar este lapply
+
+lapply(1:nrow(Train),function(x,y) points(96-y[x,1],96-y[x,2], col = "red", pch=19),y=Train)
 
 

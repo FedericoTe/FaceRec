@@ -109,7 +109,7 @@ saveRDS(Todas_Imagenes,file= "DATA/Imagenes.saved")
 
 # Para ver las imagenes una a una elegimos el numero de imagen 
 
-NumeroImagen <- 1906
+NumeroImagen <- 1
 
 # la vemos  en blanco y negro
 

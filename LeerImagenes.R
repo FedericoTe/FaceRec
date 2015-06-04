@@ -88,6 +88,10 @@ saveRDS(Todas_Imagenes,file= "DATA/Imagenes.saved")
 # Y cargarla con:
 #Todas_Imagenes <- readRDS("DATA/Imagenes.saved")
 
+
+
+
+
 #####################################################
 # VER LAS IMAGENES Y LOS PUNTOS CARACTERÍSTICOS
 #####################################################
@@ -127,10 +131,13 @@ indice <- seq(from = 1, to = (ncol(Train)-2) ,by =2)
 lapply(indice, function(x,y) points(96-y[NumeroImagen,x],96-y[NumeroImagen,x+1], col = "blue", pch = 19), y=Train )
 
 
-# Para ver la variabilidad del centro del ojo izquierdo podemos hacer:
-# Primero ver qué columnas tienen esas coordenadas con: colnames(True)
-# Ahora aplicar este lapply
+# Para ver la variabilidad del cualquiera de los 15 puntos podemos hacer:
+# Primero definimos qué punto queremos observar, con colnames(Train)
+# 
+# Segundo, aplicamos un  lapply que pase por cada imagen
 
-lapply(1:nrow(Train),function(x,y) points(96-y[x,1],96-y[x,2], col = "red", pch=19),y=Train)
+Caracteristica_Observar <- 1 # Valor de caracteristica a observar_X segun colnames(Train) en este ejemplo left_eye_center
+
+lapply(1:nrow(Train),function(x,y) points(96-y[x,Caracteristica_Observar],96-y[x,Caracteristica_Observar+1], col = "red", pch=19),y=Train)
 
 
